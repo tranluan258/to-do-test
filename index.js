@@ -5,6 +5,8 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 const userRouter = require('./router/user.route')
+const todoRouter = require('./router/to-do.route')
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -13,5 +15,5 @@ app.get("/", (req, res) => {
 })
 
 app.use("/", userRouter);
-
+app.use("/", todoRouter);
 app.listen(PORT, () => console.log("Api listen port: "+ PORT));
