@@ -1,21 +1,26 @@
-const db = require('../config/db')
+const {getRepository} = require('typeorm')
 const hash = require("bcrypt")
 
 module.exports = {
     addUser: async function(id, username, password) {
-        let query ="SELECT * FROM user WHERE username = ?";
-        let result = await db.query(query,[username]);
-        if(result.values.length > 0) {
+        const userRepository = getRepository("User");
+        const user = await userRepository.findOne({ username: username });
+        if(user) {
             return 0;
         }else {
-            query = "INSERT INTO user (id,username, password) VALUES (?, ?,?)";
-            let hashPassword = hash.hashSync(password,2);
-            let result = await db.query(query,[id,username,hashPassword])
-                if(result.values.length > 0){
-                    return 1;
-                }else {
-                    return 2;
-                }
+            let hashPassword = hash.hashSync(password,5);
+            let newUser = {
+                id: id,
+                username: username,
+                password: hashPassword
+            }
+            let result = await userRepository.save(newUser);
+            if(result){
+                return 1;
+            }else {
+                return 2;
+            }
+            
         }
     }
 }
