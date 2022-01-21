@@ -23,7 +23,7 @@ module.exports = new EntitySchema({
         userId: { 
             type: "char",
             length: 50,
-            nullable : false,
+            nullable : true,
         },
         dateCompletion: { 
             type: "date",

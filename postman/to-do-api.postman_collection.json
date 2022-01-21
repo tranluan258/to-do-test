@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "f79b4a41-3549-4280-8388-0b3d001e653a",
+		"name": "to-do-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SIGN-UP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"JoshepClark1\",\r\n    \"password\": \"abcxyz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SIGN-UP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SIGN-UP"
+					]
+				},
+				"description": "SIGN-UP new user"
+			},
+			"response": [
+				{
+					"name": "SIGN-UP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"JoshepClark\",\r\n    \"password\": \"abcxyz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/SIGN-UP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SIGN-UP"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-UPMhgAs4ZmW3a3iI28L9F6vf5c0\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 12:52:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Sign-up user success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SIGN-IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"JoshepClark\",\r\n    \"password\": \"abcxyz\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/SIGN-IN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"SIGN-IN"
+					]
+				},
+				"description": "SIGN-IN"
+			},
+			"response": [
+				{
+					"name": "SIGN-IN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"JoshepClark\",\r\n    \"password\": \"abcxyz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/SIGN-IN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"SIGN-IN"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-s5eIF5RWMH3B7jNniUb94l7kIMc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Jan 2022 12:54:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Sign-in user success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI2ODMyNDYsImV4cCI6MTY0MjY4Njg0Nn0.ETCFLjiBeholm2FlYtRnTyT8RJCrFbKaK6EW1y1P8zE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ADD-TO-DO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"todo 2\",\r\n    \"description\": \"todo 2\",\r\n    \"dateCompletion\": \"26/01/2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ADD-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ADD-TO-DO"
+					]
+				},
+				"description": "ADD NEW RECORD TODO"
+			},
+			"response": []
+		},
+		{
+			"name": "ASSIGN-TO-DO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"qTcxANM6XAtqPSLQJJB8pe\",\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ASSIGN-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ASSIGN-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASSIGN-TO-DO WITH USER AUTH",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"1Pzt5yB9vZCYwSesTZxSQ7\",\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ASSIGN-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ASSIGN-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE-TO-DO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/UPDATE-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"UPDATE-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE-TO-DO STATUS COMPLETE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/UPDATE-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"UPDATE-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE-TO-DO STATUS COMPLETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/REMOVE-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"REMOVE-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE-TO-DO SUCCESS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1zaru74op6YvMKzaBB7o65\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/REMOVE-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"REMOVE-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ALL-TASK-BY-USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"qTcxANM6XAtqPSLQJJB8pe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GET-ALL-TASK-BY-USER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET-ALL-TASK-BY-USER"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ALL-TO-DO",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/GET-ALL-TO-DO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET-ALL-TO-DO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-TO-DO-BY-ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"adXkw8X6BMBuVtzBW5ZzfV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GET-TO-DO-BY-ID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET-TO-DO-BY-ID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ALL-USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearers eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFQenQ1eUI5dlpDWXdTZXNUWnhTUTciLCJpYXQiOjE2NDI3MjczNjMsImV4cCI6MTY0MjczMDk2M30.9nBFPLu6tXRTwK_00H04Dad5Rdi7IMiI3An15nrwDM4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/GET-ALL-USER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GET-ALL-USER"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -35,5 +35,11 @@ module.exports = {
             return   {code: 2, user: null};;
         }
         return {code: 0, user: null};
+    },
+
+    getAllUsers: async function(){
+        const userRepository = getRepository("User")
+        let result = await userRepository.find();
+        return result;
     }
 }
